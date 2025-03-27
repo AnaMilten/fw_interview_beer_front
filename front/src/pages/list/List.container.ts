@@ -11,7 +11,8 @@ const connectList = connect(
       beers: allBeersSelector(state),
     }
   },
-  { fetchBeersIfNot: beerActions.fetchBeersIfNot }
+  { fetchBeersIfNot: beerActions.fetchBeersIfNot ,
+  }
 )
 
 const withDidMountList = lifecycle({

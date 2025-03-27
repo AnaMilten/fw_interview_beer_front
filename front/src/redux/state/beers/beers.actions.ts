@@ -26,6 +26,15 @@ export const beerActions = {
     type: BeerActionTypes.BEERS_SET_NEW,
     beer,
   }),
+  rateBeer: (beerId: string, rateValue: number) => ({
+    type: BeerActionTypes.BEERS_RATE,
+    beerId,
+    rateValue,
+  }),
+  updateBeer: (beer: Beer) => ({
+    type: BeerActionTypes.BEERS_UPDATE,
+    beer
+  })
 } as const
 
 export type BeerActionCollection = typeof beerActions

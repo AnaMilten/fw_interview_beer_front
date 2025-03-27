@@ -8,6 +8,8 @@ export const BeerActionTypes = {
   BEERS_SET: '@BEERS/SET',
   BEERS_CREATE: '@BEERS/CREATE',
   BEERS_SET_NEW: '@BEERS/SET_NEW',
+  BEERS_RATE: '@BEERS/RATE',
+  BEERS_UPDATE: '@BEERS/UPDATE',
 } as const
 
 export interface BeerReducerState {
