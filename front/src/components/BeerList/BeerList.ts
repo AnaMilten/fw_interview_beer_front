@@ -1,6 +1,6 @@
-import { Beer } from "../../model/Beer"
+import { Beer } from "../../model/Beer";
 
 export type BeerListProps = {
-  beers: any[]
-  loading: boolean
-}
+  beers: any[];
+  loading: boolean;
+};

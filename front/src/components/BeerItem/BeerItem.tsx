@@ -3,11 +3,12 @@ import React, { FC } from "react";
 import styles from "./BeerItem.module.scss";
 import { Rate } from "./Rate/Rate";
 import { BeerItemProps } from "./BeerItem.model";
+import { RenderCount } from "../RenderCount/RenderCount";
 
 export const BeerItem: FC<BeerItemProps> = ({ beer, rateBeer }) => {
   const handleRate = (rateValue: number): void => {
     try {
-      rateBeer(beer.uuid, rateValue);
+      rateBeer(beer, rateValue);
     } catch (err) {
       console.error(err.name);
       console.error(err.message);
@@ -22,6 +23,9 @@ export const BeerItem: FC<BeerItemProps> = ({ beer, rateBeer }) => {
       <div className={styles.score}>Score: {beer.score.toPrecision(1)}</div>
       <div className={styles.rate}>
         <Rate onRate={handleRate} />
+      </div>
+      <div>
+        <RenderCount />
       </div>
     </div>
   );

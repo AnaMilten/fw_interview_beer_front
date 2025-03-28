@@ -1,5 +1,5 @@
-import { Beer } from '../../../model/Beer'
-import { BeerActionTypes } from './beers.model'
+import { Beer } from "../../../model/Beer";
+import { BeerActionTypes } from "./beers.model";
 
 export const beerActions = {
   fetchBeersIfNot: () => ({
@@ -26,17 +26,17 @@ export const beerActions = {
     type: BeerActionTypes.BEERS_SET_NEW,
     beer,
   }),
-  rateBeer: (beerId: string, rateValue: number) => ({
+  rateBeer: (beer: Beer, rateValue: number) => ({
     type: BeerActionTypes.BEERS_RATE,
-    beerId,
+    beer,
     rateValue,
   }),
   updateBeer: (beer: Beer) => ({
     type: BeerActionTypes.BEERS_UPDATE,
-    beer
-  })
-} as const
+    beer,
+  }),
+} as const;
 
-export type BeerActionCollection = typeof beerActions
-export type AnyBeerAction = BeerActionCollection[keyof BeerActionCollection]
-export type AnyBeerActionResut = ReturnType<AnyBeerAction>
+export type BeerActionCollection = typeof beerActions;
+export type AnyBeerAction = BeerActionCollection[keyof BeerActionCollection];
+export type AnyBeerActionResut = ReturnType<AnyBeerAction>;

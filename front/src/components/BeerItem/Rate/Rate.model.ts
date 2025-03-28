@@ -1,4 +1,3 @@
-
 export interface RateProps {
-  onRate: (rateValue: number) => void
+  onRate: (rateValue: number) => void;
 }

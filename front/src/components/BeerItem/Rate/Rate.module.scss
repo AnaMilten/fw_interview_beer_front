@@ -1,15 +1,22 @@
 $size: 3rem;
 
+button{border-radius: 100%;}
 .rate {
   display: flex;
   justify-content: space-around;
   width: 100%;
 }
+
 .inLove {
   background: url(../../../assets/svg/in-love.svg);
   height: $size;
   width: $size;
   cursor: pointer;
+}
+
+.inLove:active {
+  box-shadow: 0px 0px 5px cornsilk;
+  border-radius: 100%;
 }
 
 .happy {
@@ -19,9 +26,19 @@ $size: 3rem;
   cursor: pointer;
 }
 
+.happy:active {
+  box-shadow: 0px 0px 5px cornsilk;
+  border-radius: 100%;
+}
+
 .sad {
   background: url(../../../assets/svg/sad.svg);
   height: $size;
   width: $size;
   cursor: pointer;
+}
+
+.sad:active {
+  box-shadow: 0px 0px 5px cornsilk;
+  border-radius: 100%;
 }
